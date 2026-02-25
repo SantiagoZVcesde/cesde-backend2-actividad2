@@ -9,13 +9,6 @@
 
 ---
 
-## 📌 Enlace a la base de datos en Prisma.io
-[DB_URL=jdbc:postgresql://db.prisma.io:5432/postgres?sslmode=require
-DB_USERNAME=5a928b6df42ac1d17dbbefa093a8c2f70fa0b910301144b0d7bc50f968abf24f
-DB_PASSWORD=sk_NRBOIFuG2cE3qnUyUbk1T*]
-
----
-
 ## 🗄️ Configuración de la base de datos en Prisma.io
 
 ![Configuración BD](Imagenes/ConfiguracióndelabasededatosenPrisma.io.png)
