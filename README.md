@@ -292,6 +292,8 @@
 
 ## Ejecución De Pruebas Internas
 
+---
+
 ![Pruebas](imagenes/Pruebas.png)
 
-
+---
