@@ -53,27 +53,26 @@
     "lastName": "García",
     "email": "ana.garcia@estudiante.com",
     "birthDate": "2001-03-12",
-    "id": 4,
+    "id": 1,
     "phone": "3004445566"
 }
 
 {
-    "firstName": "Cres ",
-    "lastName": "MJ",
-    "email": "Cris.Mj@estudiante.com",
-    "birthDate": "2002-12-12",
-    "id": 2,
-    "phone
-    ": "3004445788"
+    "firstName": "Laura",
+    "lastName": "Martínez",
+    "email": "laura.martinez@estudiante.com",
+    "birthDate": "2002-11-03",
+    "id": 6,
+    "phone": "3023334455"
 }
 
 {
-    "firstName": "Santiago ",
-    "lastName": "ZV",
-    "email": "SantiagoZV@estudiante.com",
-    "birthDate": "2006-08-12",
-    "id": 3,
-    "phone": "3003917296"
+    "firstName": "Carlos",
+    "lastName": "Rodríguez",
+    "email": "carlos.rodriguez@estudiante.com",
+    "birthDate": "2000-07-25",
+    "id": 5,
+    "phone": "3017778899"
 }
 ```
 
@@ -84,6 +83,19 @@
 ![POST](Imagenes/POST.png)
 
 ---
+
+---
+
+![POST](Imagenes/POST2.png)
+
+---
+
+---
+
+![POST](Imagenes/POST3.png)
+
+---
+
 
 ### 2. Obtener la lista completa
 
@@ -115,7 +127,7 @@
         "lastName": "García",
         "email": "ana.garcia@estudiante.com",
         "birthDate": "2001-03-12",
-        "id": 4,
+        "id": 1,
         "phone": "3004445566"
     }
 ]
@@ -137,14 +149,14 @@
 * **Respuesta del Servidor (Completar):**
 
 ```json
-{
-    "firstName": "Santiago ",
-    "lastName": "ZV",
-    "email": "SantiagoZV@estudiante.com",
-    "birthDate": "2006-08-12",
-    "id": 3,
-    "phone": "3003917296"
-}
+    {
+        "firstName": "Ana",
+        "lastName": "García",
+        "email": "ana.garcia@estudiante.com",
+        "birthDate": "2001-03-12",
+        "id": 1,
+        "phone": "3004445566"
+    }
 
 ```
 
@@ -163,14 +175,14 @@
 * **Respuesta del Servidor (Completar):**
 
 ```json
-{
-    "firstName": "Santiago ",
-    "lastName": "ZV",
-    "email": "SantiagoZV@estudiante.com",
-    "birthDate": "2006-08-12",
-    "id": 3,
-    "phone": "3003917296"
-}
+    {
+        "firstName": "Ana",
+        "lastName": "García",
+        "email": "ana.garcia@estudiante.com",
+        "birthDate": "2001-03-12",
+        "id": 1,
+        "phone": "3004445566"
+    }
 
 ```
 
@@ -203,11 +215,11 @@
 
 ```json
 {
-    "firstName": "Ana Cristina",
+    "firstName": "Ana María",
     "lastName": "García",
     "email": "ana.garcia@estudiante.com",
     "birthDate": "2001-03-12",
-    "id": 4,
+    "id": 1,
     "phone": "3119998877"
 }
 
@@ -231,7 +243,7 @@
 {
   "error": "Not Found",
   "status": 404,
-  "message": "Student with id 6 not found"
+  "message": "Student with id 999 not found"
 }
 
 ```
@@ -252,7 +264,7 @@
 
 ```json
 {
-  "message": "Student with id 4 deleted successfully"
+  "message": "Student with id 1 deleted successfully"
 }
 
 ```
@@ -274,7 +286,7 @@
 
 
 2. **En el escenario de error (punto 6), ¿qué información devuelve la API y por qué es importante para un desarrollador frontend recibir un código 404 en lugar de un código 500?**
-* *Respuesta: la api en mi caso devuelve nada solo el status 404 que indica que el error fue de cliente y la importacia de que llegue un 404 a un 500 es que el 404 es especifico y manejable yel 500 es geerico y preocupa*
+* *Respuesta: La api devuelve un 404 que indica que el error fue de cliente y un mensaje en el cual dice que no existe el estudiante 999  y la importacia de que llegue un 404 a un 500 es que el 404 es especifico y manejable yel 500 es geerico y preocupa*
 
 
 3. **¿Qué sucede en la base de datos PostgreSQL cuando se ejecuta con éxito la petición DELETE? (Explique brevemente en términos de persistencia).**
