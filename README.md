@@ -3,6 +3,35 @@
  Esta actividad debe documentarse íntegramente en este archivo `README.md`. Por cada punto, el estudiante debe ejecutar la petición indicada y completar los espacios en blanco con la **Respuesta del Servidor** y el **Código de Estado** real obtenido en su entorno local.
 
 ---
+# Actividad: Integración de Spring Boot con Prisma.io
+
+**Nombre completo:** [Santiago Zapata Villada]
+
+---
+
+## 📌 Enlace a la base de datos en Prisma.io
+[DB_URL=jdbc:postgresql://db.prisma.io:5432/postgres?sslmode=require
+DB_USERNAME=5a928b6df42ac1d17dbbefa093a8c2f70fa0b910301144b0d7bc50f968abf24f
+DB_PASSWORD=sk_NRBOIFuG2cE3qnUyUbk1T*]
+
+---
+
+## 🗄️ Configuración de la base de datos en Prisma.io
+
+![Configuración BD](Imagenes/ConfiguracióndelabasededatosenPrisma.io.png)
+
+---
+
+## 📊 Log de conexión exitosa de Spring Boot
+
+![Conexión Spring Boot](Imagenes/LogdeconexiónexitosadeSpringBoot.png)
+
+---
+
+## 📝 Notas adicionales
+- Las contraseñas y datos sensibles han sido ocultados en las capturas por seguridad.
+- La aplicación corre en `http://localhost:8080`
+- Base de datos: PostgreSQL en Prisma.io
 
 ## 🚀 Guía de Pruebas y Documentación
 
@@ -26,11 +55,22 @@
 * **Respuesta del Servidor (Completar):**
 
 ```json
-
+{
+    "firstName": "Ana",
+    "lastName": "García",
+    "email": "ana.garcia@estudiante.com",
+    "birthDate": "2001-03-12",
+    "id": 1,
+    "phone": "3004445566"
+}
 
 ```
 
-* **Código de Estado (Status Code):** `____`
+* **Código de Estado (Status Code):** `201`
+
+---
+
+![POST](Imagenes/POST.png)
 
 ---
 
@@ -41,11 +81,24 @@
 * **Respuesta del Servidor (Completar):**
 
 ```json
-
+[
+    {
+        "firstName": "Ana",
+        "lastName": "García",
+        "email": "ana.garcia@estudiante.com",
+        "birthDate": "2001-03-12",
+        "id": 1,
+        "phone": "3004445566"
+    }
+]
 
 ```
 
-* **Código de Estado (Status Code):** `____`
+* **Código de Estado (Status Code):** `200`
+
+---
+
+![GET](Imagenes/GET.png)
 
 ---
 
@@ -56,11 +109,22 @@
 * **Respuesta del Servidor (Completar):**
 
 ```json
-
+{
+    "firstName": "Ana",
+    "lastName": "García",
+    "email": "ana.garcia@estudiante.com",
+    "birthDate": "2001-03-12",
+    "id": 1,
+    "phone": "3004445566"
+}
 
 ```
 
-* **Código de Estado (Status Code):** `____`
+* **Código de Estado (Status Code):** `200`
+
+---
+
+![GET](Imagenes/GETID.png)
 
 ---
 
@@ -71,11 +135,22 @@
 * **Respuesta del Servidor (Completar):**
 
 ```json
-
+{
+    "firstName": "Ana",
+    "lastName": "García",
+    "email": "ana.garcia@estudiante.com",
+    "birthDate": "2001-03-12",
+    "id": 1,
+    "phone": "3004445566"
+}
 
 ```
 
-* **Código de Estado (Status Code):** `____`
+* **Código de Estado (Status Code):** `200`
+
+---
+
+![GET](Imagenes/GETEMAIL.png)
 
 ---
 
@@ -99,11 +174,22 @@
 * **Respuesta del Servidor (Completar):**
 
 ```json
-
+{
+    "firstName": "Ana María",
+    "lastName": "García",
+    "email": "ana.garcia@estudiante.com",
+    "birthDate": "2001-03-12",
+    "id": 1,
+    "phone": "3119998877"
+}
 
 ```
 
-* **Código de Estado (Status Code):** `____`
+* **Código de Estado (Status Code):** `200`
+
+---
+
+![PUT](Imagenes/PUT.png)
 
 ---
 
@@ -118,7 +204,11 @@
 
 ```
 
-* **Código de Estado (Status Code):** `____`
+* **Código de Estado (Status Code):** `404`
+
+---
+
+![GET](Imagenes/GETFAILE.png)
 
 ---
 
@@ -133,7 +223,11 @@
 
 ```
 
-* **Código de Estado (Status Code):** `____`
+* **Código de Estado (Status Code):** `204`
+
+---
+
+![DELETE](Imagenes/DELETE.png)
 
 ---
 
@@ -142,23 +236,23 @@
 **Instrucciones:** Responda las siguientes preguntas basándose en su experiencia durante el laboratorio y el código del proyecto.
 
 1. **¿Cuál es la diferencia entre los códigos de estado 200 y 201? ¿En qué endpoints se obtuvieron cada uno?**
-* *Respuesta:*
+* *Respuesta: El 201 se hizo en el Post y el 200 en el Get la diferencia es que el 201 es cuando se crea un objeto y el 200 es cuando se obtiene un objeto*
 
 
 2. **En el escenario de error (punto 6), ¿qué información devuelve la API y por qué es importante para un desarrollador frontend recibir un código 404 en lugar de un código 500?**
-* *Respuesta:*
+* *Respuesta: la api en mi caso devuelve nada solo el status 404 que indica que el error fue de cliente y la importacia de que llegue un 404 a un 500 es que el 404 es especifico y manejable yel 500 es geerico y preocupa*
 
 
 3. **¿Qué sucede en la base de datos PostgreSQL cuando se ejecuta con éxito la petición DELETE? (Explique brevemente en términos de persistencia).**
-* *Respuesta:*
+* *Respuesta: El registro se elimina permanentemente sin posibilidad de recuperar a menos de que se reinicie la base de datos*
 
 
 4. **Si intentara crear un estudiante con el mismo email que ya existe en la base de datos, ¿qué cree que sucedería y qué código de error sería el más adecuado para devolver?**
-* *Respuesta:*
+* *Respuesta: sucede que no se puede crear porque ya hay un registro con el mismo email y la tabla debe teer un registro unico asi que tiraria un error 409*
 
 
 5. **¿Por qué utilizamos el método PUT para actualizar y no el método POST? ¿Cuál es la convención técnica detrás de esta decisión?**
-* *Respuesta:*
+* *Respuesta: Por que el put se usa para modificar un campo en especifico y el post es para crear si usaramos el post creariamos el mismo varias veces y no seria bueno tener registros duplecados *
 
 
 
