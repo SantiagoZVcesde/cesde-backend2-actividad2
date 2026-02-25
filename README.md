@@ -309,3 +309,13 @@
 ![Pruebas](imagenes/Pruebas.png)
 
 ---
+
+## 📌 Enlace a la base de datos en Prisma.io
+
+**Nota:** La base de datos está alojada en Prisma.io, pero esta plataforma no proporciona un enlace público directo para compartir. El acceso está restringido a través de la conexión JDBC configurada en el proyecto.
+
+**Detalles de conexión utilizados:**
+- **Host:** `db.prisma.io`
+- **Puerto:** `5432`
+- **Base de datos:** `postgres`
+- **SSL:** `require` (conexión segura)
