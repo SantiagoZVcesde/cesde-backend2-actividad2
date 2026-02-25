@@ -53,10 +53,28 @@
     "lastName": "García",
     "email": "ana.garcia@estudiante.com",
     "birthDate": "2001-03-12",
-    "id": 1,
+    "id": 4,
     "phone": "3004445566"
 }
 
+{
+    "firstName": "Cres ",
+    "lastName": "MJ",
+    "email": "Cris.Mj@estudiante.com",
+    "birthDate": "2002-12-12",
+    "id": 2,
+    "phone
+    ": "3004445788"
+}
+
+{
+    "firstName": "Santiago ",
+    "lastName": "ZV",
+    "email": "SantiagoZV@estudiante.com",
+    "birthDate": "2006-08-12",
+    "id": 3,
+    "phone": "3003917296"
+}
 ```
 
 * **Código de Estado (Status Code):** `201`
@@ -74,13 +92,30 @@
 * **Respuesta del Servidor (Completar):**
 
 ```json
+
 [
+    {
+        "firstName": "Cres ",
+        "lastName": "MJ",
+        "email": "Cris.Mj@estudiante.com",
+        "birthDate": "2002-12-12",
+        "id": 2,
+        "phone": "3004445788"
+    },
+    {
+        "firstName": "Santiago ",
+        "lastName": "ZV",
+        "email": "SantiagoZV@estudiante.com",
+        "birthDate": "2006-08-12",
+        "id": 3,
+        "phone": "3003917296"
+    },
     {
         "firstName": "Ana",
         "lastName": "García",
         "email": "ana.garcia@estudiante.com",
         "birthDate": "2001-03-12",
-        "id": 1,
+        "id": 4,
         "phone": "3004445566"
     }
 ]
@@ -103,12 +138,12 @@
 
 ```json
 {
-    "firstName": "Ana",
-    "lastName": "García",
-    "email": "ana.garcia@estudiante.com",
-    "birthDate": "2001-03-12",
-    "id": 1,
-    "phone": "3004445566"
+    "firstName": "Santiago ",
+    "lastName": "ZV",
+    "email": "SantiagoZV@estudiante.com",
+    "birthDate": "2006-08-12",
+    "id": 3,
+    "phone": "3003917296"
 }
 
 ```
@@ -129,12 +164,12 @@
 
 ```json
 {
-    "firstName": "Ana",
-    "lastName": "García",
-    "email": "ana.garcia@estudiante.com",
-    "birthDate": "2001-03-12",
-    "id": 1,
-    "phone": "3004445566"
+    "firstName": "Santiago ",
+    "lastName": "ZV",
+    "email": "SantiagoZV@estudiante.com",
+    "birthDate": "2006-08-12",
+    "id": 3,
+    "phone": "3003917296"
 }
 
 ```
@@ -168,11 +203,11 @@
 
 ```json
 {
-    "firstName": "Ana María",
+    "firstName": "Ana Cristina",
     "lastName": "García",
     "email": "ana.garcia@estudiante.com",
     "birthDate": "2001-03-12",
-    "id": 1,
+    "id": 4,
     "phone": "3119998877"
 }
 
@@ -193,7 +228,11 @@
 * **Respuesta del Servidor (Completar):**
 
 ```json
-
+{
+  "error": "Not Found",
+  "status": 404,
+  "message": "Student with id 6 not found"
+}
 
 ```
 
@@ -212,7 +251,9 @@
 * **Respuesta del Servidor (Completar):**
 
 ```json
-
+{
+  "message": "Student with id 4 deleted successfully"
+}
 
 ```
 
@@ -247,5 +288,10 @@
 5. **¿Por qué utilizamos el método PUT para actualizar y no el método POST? ¿Cuál es la convención técnica detrás de esta decisión?**
 * *Respuesta: Por que el put se usa para modificar un campo en especifico y el post es para crear si usaramos el post creariamos el mismo varias veces y no seria bueno tener registros duplecados *
 
+---
+
+## Ejecución De Pruebas Internas
+
+![Pruebas](imagenes/Pruebas.png)
 
 
